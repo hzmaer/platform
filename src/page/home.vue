@@ -8,10 +8,10 @@
  </div>
 </template>
 <script>
-import bannerList from './Banner.vue'
-import fastTab from './Entrance.vue'
-import homeList from './Homelist.vue'
-import homeFoot from './Homefoot.vue'
+import bannerList from '../components/Banner.vue'
+import fastTab from '../components/Entrance.vue'
+import homeList from '../components/Homelist.vue'
+import homeFoot from '../components/Homefoot.vue'
 export default {
   components: {
     bannerList: bannerList,

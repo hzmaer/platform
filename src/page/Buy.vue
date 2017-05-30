@@ -7,10 +7,10 @@
   </div>
 </template>
 <script>
-  import listpageHead from './Listpagehead.vue'
-  import filterInfo from './filterInfo.vue'
-  import homeList from './Homelist.vue'
-  import homeFoot from './Homefoot.vue'
+  import listpageHead from '../components/Listpagehead.vue'
+  import filterInfo from '../components/filterInfo.vue'
+  import homeList from '../components/Homelist.vue'
+  import homeFoot from '../components/Homefoot.vue'
   export default {
     components: {
       homeList: homeList,

@@ -1,23 +1,28 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import App from '../App'
+// 首页
+import Home from '../page/home.vue'
+// 买
+import Buy from '../page/buy.vue'
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    component: App,
-    children: [{
-      path: '',
-      component: r => require.ensure([], () => r(require('../components/home')), 'home')
-    }, {
-      path: '/buy',
-      component: r => require.ensure([], () => r(require('../components/buy')), 'buy')
-    }]
+    component: Home
+  },
+  {
+    path: '/buy',
+    component: Buy
+  },
+  {
+    path: '/*',
+    redirect: '/'
   }
 ]
 const router = new VueRouter({
-  routes
+  routes,
+  mode: 'history'
 })
 export default router
 
