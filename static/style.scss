@@ -1,0 +1,32 @@
+html{font-size: 14px;color:#000000;}
+a{text-decoration: none;}
+ul,dl{margin:0;padding:0;}
+h3{font-size: 2rem;font-weight: bold;}
+.cen{padding: 1rem;}
+ul.p-list{
+  li{list-style: none;padding:0.5rem 0rem;
+    a{display: flex;}
+  }
+}
+#p-left{width:11rem;height: 8.5rem;background: #46e196;margin-right: 2rem;}
+#p-right{flex:1;-webkit-box-flex:1;
+  dt{margin:0;padding:0;color:#000000;text-decoration: none;font-size: 2rem;},
+  dd{margin:0;padding:0;color:#000000;text-decoration: none;font-size: 1.7rem;color:#b9b9b9;margin-top: 0.5rem;}
+}
+#entrance{display: flex;}
+.e-list{flex:1;-webkit-box-flex:1;
+  img{margin:0 auto;display: inherit;}
+  p{color:#5c5c5c;font-size: 2rem;width:100%;text-align: center;}
+}
+#foot{width:100%;height:6rem;background: #f6f6f6;padding: 0.5rem 0rem;position: fixed;bottom:0rem;left:0rem;}
+#foot-icon{display: flex;
+  li{flex: 3;-webkit-box-flex: 1;width:100%;text-align: center;
+    p{width:100%;text-align: center;font-size: 1.6rem;color:#666666;margin-top: 0.3rem;}
+  }
+  li:nth-child(1){flex: 1;}
+  li:nth-child(3){flex: 1;}
+}
+$iconcolor:#b5b5b5;
+.icon-gerenzhongxin:before{content:"\e606";color:$iconcolor;}
+.icon-fabu:before{content:"\e655";color:$iconcolor;}
+.icon-shouye-shouye:before{content:"\e501";color:$iconcolor;}
