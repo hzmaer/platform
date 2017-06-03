@@ -6,13 +6,16 @@
       </router-link>
     </mt-header>
    <publishPhoto></publishPhoto>
+   <publishForm></publishForm>
   </div>
 </template>
 <script>
 import publishPhoto from '../components/Publishphoto.vue'
+import publishForm from '../components/publishForm.vue'
 export default {
   components: {
-    publishPhoto: publishPhoto
+    publishPhoto: publishPhoto,
+    publishForm: publishForm
   }
 }
 </script>
