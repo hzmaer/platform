@@ -10,5 +10,6 @@
   a{text-decoration: none;}
   ul,dl{margin:0;padding:0;list-style: none;}
   h3{font-size: 2rem;font-weight: bold;}
+  input{font-size:inherit;vertical-align:middle;outline: none;}
 </style>
 

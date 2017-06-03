@@ -8,7 +8,7 @@
 </template>
 <script>
   import listpageHead from '../components/Listpagehead.vue'
-  import filterInfo from '../components/filterInfo.vue'
+  import filterInfo from '../components/FilterInfo.vue'
   import homeList from '../components/Homelist.vue'
   import homeFoot from '../components/Homefoot.vue'
   export default {

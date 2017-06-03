@@ -1,24 +1,21 @@
 <template>
-  <div id="banner">
-    <div class="page-swipe">
-    <mt-swipe :auto="4000">
-      <mt-swipe-item class="slide1">1</mt-swipe-item>
-      <mt-swipe-item class="slide2">2</mt-swipe-item>
-      <mt-swipe-item class="slide3">3</mt-swipe-item>
-    </mt-swipe>
-    </div>
-  </div>
+  <ul id="detail-page-head">
+    <li class="detail-head-item"><i class="el-icon-arrow-left"></i></li>
+    <li class="detail-head-item"><p>摊位详情</p></li>
+    <li class="detail-head-item"><i class="el-icon-star-off"></i></li>
+  </ul>
 </template>
 <style lang="scss" scoped>
-  .page-swipe{
-    .mint-swipe{height: 400px;color: #fff;font-size: 30px;text-align: center;margin-bottom: 20px;}
-    .mint-swipe-item{line-height: 200px;background: #46e196;}
-    .slide1{background-color: #0089dc;color: #fff;}
-    .slide2 {background-color: #ffd705;color: #000;}
-    .slide3 {background-color: #ff2d4b;color: #fff;}
-  }
-  .page-swipe-desc {text-align: center;color: #666;margin-bottom: 5px;}
-  .mint-swipe-indicator{background: #000;opacity: 0.2;margin: 0 3px;}
-  .mint-swipe-indicator.is-active {background: #46e196;}
+#detail-page-head{display: flex;padding: 1.5rem;background: #f6f6f6;
+li{flex: 3;-webkit-box-flex: 1;height: 4rem;line-height: 4rem;text-align: center;}
+li:nth-child(1){flex: 1;text-align: left;
+.el-icon-arrow-left{color: #bfcbd9; font-size: 2rem;margin-top: 1rem;}
+}
+li:nth-child(3){flex: 1;text-align: right;
+.el-icon-star-off{color: #bfcbd9; font-size: 2rem;margin-top: 1rem;}
+}
+p{font-size: 2rem;color: #666666;}
+}
+
 </style>
 
