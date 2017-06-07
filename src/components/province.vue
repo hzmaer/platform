@@ -1,73 +1,64 @@
 <template>
-<nav class="location-bar">
-  <ul class="location-tree" v-for="item in items">
-    <li v-if="!item.children"><a href="#">{{item.text}}</a></li>
-    <li v-if="item.children"><a href="#" v-on:click="toggleChildren(item)" v-bind:class="{active:item.isActive}">{{item.text}}<span></span></a>
-      <ul v-show="item.isShow" class="childs">
-        <li v-for="child in item.children"><a href="#">{{child.text}}</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+  <!--<mt-picker :slots="slots" @change="onCityChange"  :visible-item-count="3"></mt-picker>-->
+  <mt-picker :slots="slots" @change="onCityChange"></mt-picker>
 </template>
 <script>
-export default{
+
+//  data () {
+//    return {
+//      slots: [
+//        {
+//          flex: 1,
+//          values: Object.keys(),
+//          className: 'slot1',
+//          textAlign: 'center'
+//        }, {
+//          divider: true,
+//          content: '-',
+//          className: 'slot2'
+//        }, {
+//          flex: 1,
+//          values: Object.values()[0],
+//          className: 'slot3',
+//          textAlign: 'center'
+//        }
+//      ]
+//    }
+//  },
+//  methods: {
+//    onCityChange: function () {
+//    }
+//  }
+
+export default {
   methods: {
-    toggleChildren: function (item) {
-      item.isShow = !item.isShow
-      item.isActive = !item.isActive
+    onCityChange (picker, values) {
     }
   },
   data () {
     return {
-      items: [
+      slots: [
         {
-          text: '湖北',
-          isShow: false,
-          isActive: true,
-          children: [{
-            text: '武汉'
-          }, {
-            text: '荆门'
-          }, {
-            text: '荆州'
-          }]
+          flex: 1,
+          values: ['1', '2'],
+          className: 'slot1',
+          textAlign: 'center'
         }, {
-          text: '浙江',
-          isShow: false,
-          isActive: true,
-          children: [{
-            text: '杭州'
-          }, {
-            text: '宁波'
-          }, {
-            text: '嘉兴'
-          }]
+          divider: true,
+          content: '-',
+          className: 'slot2'
         }, {
-          text: '广东',
-          isShow: false,
-          isActive: true,
-          children: [{
-            text: '深圳'
-          }, {
-            text: '广州'
-          }, {
-            text: '惠州'
-          }]
+          flex: 1,
+          values: ['3', '4'],
+          className: 'slot3',
+          textAlign: 'center'
         }
+      ],
+      areaList: [
       ]
     }
   }
 }
 </script>
 <style lang="scss" scoped>
-.location-bar{position:absolute;top:0rem;left:0rem;width:100%;}
-.location-tree{
- li{height: 4rem;line-height: 4rem;font-size: 2rem;background: #f6f6f6;
- a{color:#666666;display: inline-block;width:100%;}
- .childs{position: fixed;left:5rem;top:7rem;width:100%;
- li{background: #ffffff;}
- }
-}
-}
 </style>
