@@ -61,5 +61,4 @@ export default {
 .mint-cell-value{-webkit-box-flex:5;-ms-flex:5;flex:5;font-size: 2rem;color:#666666;}
 .mint-cell-val{border: none;width:20%;}
 }
-
 </style>
