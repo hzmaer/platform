@@ -4,7 +4,7 @@
     <a class="mint-cell">
       <div class="mint-cell-wrapper">
         <div class="mint-cell-title"><span class="mint-cell-text">省份</span></div>
-        <div class="mint-cell-value"><input type="text" placeholder="全国" id="province-value" class="mint-cell-val"></div>
+        <div class="mint-cell-value"><input type="text" placeholder="全国" id="province-value" class="mint-cell-val" v-model="province"></div>
         <a class="mint-cell-more">></a>
       </div>
     </a>
@@ -30,14 +30,24 @@
       </div>
     </a>
   </div>
-  <province></province>
+  <province v-on:showProvince="showProvince"></province>
 </div>
 </template>
 <script>
 import province from '../components/province.vue'
 export default {
+  data () {
+    return {
+      province: '全国'
+    }
+  },
   components: {
     province: province
+  },
+  methods: {
+    showProvince (value, value1) {
+      this.province = value + ' ' + (value1 === value ? '' : value1)
+    }
   }
 }
 </script>

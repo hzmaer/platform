@@ -12,6 +12,7 @@
       </router-link>
     </li>
   </ul>
+  <div class="test"></div>
 </div>
 </template>
 <script>
@@ -57,4 +58,5 @@ export default {
     dt{margin:0;padding:0;color:#000000;text-decoration: none;font-size: 2rem;},
     dd{margin:0;padding:0;color:#000000;text-decoration: none;font-size: 1.7rem;color:#b9b9b9;margin-top: 0.5rem;}
   }
+  .test{width:300px;height:100px;-webkit-box-shadow:0 1px 1px -1px rgba(0, 0, 0, 0.5);}
 </style>
