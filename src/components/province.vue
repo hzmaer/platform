@@ -1,5 +1,7 @@
 <template>
+  <div class="province">
   <mt-picker value-key="item_name" :slots="slots" @change="onCityChange"></mt-picker>
+  </div>
 </template>
 <script>
 import cityJson from '../js/areaList'

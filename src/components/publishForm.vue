@@ -4,7 +4,11 @@
     <a class="mint-cell">
       <div class="mint-cell-wrapper">
         <div class="mint-cell-title"><span class="mint-cell-text">省份</span></div>
-        <div class="mint-cell-value"><input type="text" placeholder="全国" id="province-value" class="mint-cell-val" v-model="province"></div>
+        <div class="mint-cell-value">
+          <router-link  to='chooseArea'>
+            <input type="text" placeholder="全国" id="province-value" class="mint-cell-val" v-model="province">
+          </router-link>
+        </div>
         <a class="mint-cell-more">></a>
       </div>
     </a>
@@ -30,26 +34,25 @@
       </div>
     </a>
   </div>
-  <province v-on:showProvince="showProvince"></province>
 </div>
 </template>
 <script>
-import province from '../components/province.vue'
-export default {
-  data () {
-    return {
-      province: '全国'
+    export default {
+      data () {
+        return {
+          province: ''
+        }
+      },
+      created () {
+        this.setArea()
+      },
+      methods: {
+        setArea () {
+          let addr = localStorage.getItem('area')
+          this.province = addr
+        }
+      }
     }
-  },
-  components: {
-    province: province
-  },
-  methods: {
-    showProvince (value, value1) {
-      this.province = value + ' ' + (value1 === value ? '' : value1)
-    }
-  }
-}
 </script>
 <style lang="scss" scoped>
 .publishformBox{position: relative;}
@@ -59,6 +62,6 @@ export default {
 .mint-cell-more{-webkit-box-flex:1;-ms-flex:1;flex:1;text-align: right;color:#666666;}
 .mint-cell-title{-webkit-box-flex:2;-ms-flex:2;flex:2;}
 .mint-cell-value{-webkit-box-flex:5;-ms-flex:5;flex:5;font-size: 2rem;color:#666666;}
-.mint-cell-val{border: none;width:20%;}
+.mint-cell-val{border: none;width:100%;}
 }
 </style>

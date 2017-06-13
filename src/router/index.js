@@ -16,6 +16,12 @@ import Jobdetail from '../page/Jobdetail.vue'
 import Publish from '../page/Publish.vue'
 // 我要买发布页
 import Publishbuy from '../page/Publishbuy.vue'
+// 选择地区
+import province from '../components/province.vue'
+// 发布页选择列表
+import publishForm from '../components/publishForm.vue'
+// 发布页选择地区
+import chooseArea from '../components/chooseArea.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -50,6 +56,18 @@ const routes = [
   {
     path: '/Publishbuy',
     component: Publishbuy
+  },
+  {
+    path: '/province',
+    component: province
+  },
+  {
+    path: '/publishForm',
+    component: publishForm
+  },
+  {
+    path: '/chooseArea',
+    component: chooseArea
   },
   {
     path: '/*',
