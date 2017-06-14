@@ -8,6 +8,11 @@
 * webpack 
 * mint-ui
 * mock模拟数据
+# 目录结构
+<pre><code>&lt;div class="footer"&gt;
+    &amp;copy; 2004 Foo Corporation
+&lt;/div&gt;
+</code></pre>
 
 
 
